@@ -1,5 +1,5 @@
 /* ------  Strukturen ----- */
-
+\! cls
 /* Kommentar 1 */
 #  Kommentar 2
 -- Kommentar 3
@@ -28,8 +28,8 @@ SHOW TABLES;
 
 DESCRIBE test;
 /* ----- Daten ------- */
-INSERT INTO test(name,age) VALUES("Max",35);
-INSERT INTO test(age,name) VALUES(29,"Maxine");
+INSERT INTO test(first_name,age) VALUES("Max",35);
+INSERT INTO test(age,first_name) VALUES(29,"Maxine");
 INSERT INTO test VALUES();
 
 
