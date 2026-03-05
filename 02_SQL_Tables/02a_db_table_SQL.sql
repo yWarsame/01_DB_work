@@ -28,9 +28,9 @@ SHOW TABLES;
 
 DESCRIBE test;
 /* ----- Daten ------- */
-INSERT INTO test(first_name,age) VALUES("Max",35);
-INSERT INTO test(age,first_name) VALUES(29,"Maxine");
-INSERT INTO test VALUES();
+-- INSERT INTO test(first_name,age) VALUES("Max",35);
+-- INSERT INTO test(age,first_name) VALUES(29,"Maxine");
+-- INSERT INTO test VALUES();
 
 
 /* ---- Inhalte der Tabelle anzeigen ---- */
