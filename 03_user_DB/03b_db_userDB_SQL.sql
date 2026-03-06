@@ -28,7 +28,7 @@ VALUES
 -- Beispiel mit DEFAULT-Werten
 INSERT INTO boo.users (userName, userPwd) 
 VALUES ("newuser", "neuespasswort");
-
+SELECT * FROM boo.users;
 /* Inhalte : Ergebnisstabelle anzeigen */
 -- Passwörter als ***** anzeigen
 SELECT 
