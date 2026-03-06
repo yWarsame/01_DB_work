@@ -21,19 +21,40 @@ DESCRIBE boo.users;
 -- pwd ergänzen (hier als Klartext - in der Praxis besser gehasht!)
 INSERT INTO boo.users (userName, userPwd, first_name, last_name, age) 
 VALUES 
-    ("maxm", "geheim123", "Max", "Mustermann", 35),
-    ("maxine", "sicher!456", "Maxine", "Musterfrau", 29),
-    ("j_doe", "passwort789", "John", "Doe", 42);
+("sascha", "sascha123", "Sascha", "Müller", 28),
+("lio", "lio456", "Lio", "Schmidt", 24),
+("alex", "alex789", "Alex", "Fischer", 31);
 
 -- Beispiel mit DEFAULT-Werten
 INSERT INTO boo.users (userName, userPwd) 
 VALUES ("newuser", "neuespasswort");
 
 /* Inhalte : Ergebnisstabelle anzeigen */
-SELECT * FROM boo.users;
+-- Passwörter als ***** anzeigen
+SELECT 
+    id,
+    userName,
+    REPEAT('*', CHAR_LENGTH(userPwd)) AS userPwd,
+    first_name,
+    last_name,
+    age 
+FROM boo.users;
 
 -- Nur bestimmte Spalten anzeigen
-SELECT userName, first_name, last_name, age FROM boo.users;
+SELECT 
+    userName, 
+    REPEAT('*', CHAR_LENGTH(userPwd)) AS userPwd,
+    first_name, 
+    last_name, 
+    age 
+FROM boo.users;
 
 -- Mit WHERE-Bedingung
-SELECT * FROM boo.users WHERE age > 30;
+SELECT 
+    userName, 
+    REPEAT('*', CHAR_LENGTH(userPwd)) AS userPwd,
+    first_name, 
+    last_name, 
+    age 
+FROM boo.users 
+WHERE age > 30;
