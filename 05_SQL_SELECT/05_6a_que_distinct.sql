@@ -45,7 +45,7 @@ ORDER BY payouts ASC
 */
 
 # welche Unternehmen zahlen monatlich?
-/*
+/**/
 SELECT
     industry Branche,
     c_name Unternehmen,
@@ -55,4 +55,4 @@ WHERE payouts = 12
 ORDER BY Branche ASC
 ;
 
-*/
+
