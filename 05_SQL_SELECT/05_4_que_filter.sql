@@ -11,7 +11,7 @@
 
 # Eingrenzen/Filtern WHERE & AND/OR etc.
 # Scharfe Suche
-/*
+/* 
 SELECT
 	ticker AS "SYM",
     c_name AS "Unternehmen",
@@ -32,7 +32,7 @@ FROM stocks.ccc
 # Kombination durch AND / OR
 -- WHERE sector = "Communication Services" AND (industry = "Entertainment" OR industry = "Media")
 # Kombination durch AND / NOT
-WHERE sector = "Communication Services" AND NOT industry = "Media"
+-- WHERE sector = "Communication Services" AND NOT industry = "Media"
 
 # Sortierung
 ORDER BY industry DESC 
@@ -49,7 +49,7 @@ LIMIT 20
 SELECT
 	ticker AS "SYM",
     c_name AS Unternehmen,
-	industry Branche
+	industry  Branche
 FROM stocks.ccc
 
 #scharfe Suche nach Strings
@@ -64,7 +64,7 @@ FROM stocks.ccc
 -- WHERE industry LIKE "%ood%"
 
 # Branchenname endet/beginnt mit ... , danach/davor/inmitten genau _ Char
--- WHERE industry LIKE "__dia"
+-- -- WHERE industry LIKE "__dia"
 -- WHERE industry LIKE "Med__"
 -- WHERE industry LIKE "M___a"
 -- WHERE industry LIKE "_ir%"
@@ -72,7 +72,7 @@ FROM stocks.ccc
 
 -- WHERE industry LIKE "%ment"
 -- WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment"
-WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment" AND industry NOT LIKE "%tain%"
+-- WHERE industry LIKE "%ment" AND industry NOT LIKE "%ipment" AND industry NOT LIKE "%tain%"
 
 ORDER BY industry ASC
 LIMIT 40
@@ -91,7 +91,7 @@ FROM stocks.ccc
 
 -- WHERE sector = "Financials" 
 -- WHERE sector = "Financials" AND industry NOT IN ("Insurance","Banks") 
-WHERE industry IN ("Banks","Beverages")
+-- WHERE industry IN ("Banks","Beverages")
 
 ORDER BY industry ASC
 LIMIT 400 -- X Zeilen ab 0
@@ -104,11 +104,11 @@ LIMIT 400 -- X Zeilen ab 0
 SELECT
 	c_name "Unternehmen"
 FROM stocks.ccc
-WHERE c_name RLIKE "^[AZ]"  -- mit A oder Z beginnend
--- WHERE c_name RLIKE "^[1-9]"  -- mit Ziffer beginnend
+-- WHERE c_name RLIKE "^[AZ]"  -- mit A oder Z beginnend
+WHERE c_name RLIKE "^[1-9]"  -- mit Ziffer beginnend
 ORDER BY c_name;
-*/
 
+* /
 # Eingrenzen/Filtern WHERE & BETWEEN / NOT BETWEEN
 /**/
 SELECT 
